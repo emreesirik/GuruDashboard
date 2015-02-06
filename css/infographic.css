@@ -122,7 +122,6 @@ html, body, .infographic-container {
     color: #8899A2;
 
     font-size: 2.7vh;
-    padding-left: 10px;
 }
 
 .infographic-container .energy .detail {
@@ -220,4 +219,10 @@ html, body, .infographic-container {
 
 .odometer-value{
     font-family: "Open Sans";
+}
+
+.matter img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
 }
