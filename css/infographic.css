@@ -78,11 +78,13 @@ html, body, .infographic-container {
 
 .infographic-container .matter {
     background: #6C7A89;
+    text-align: center;
 }
 
 .infographic-container .people {
     background: #AB81B6;
     border-bottom-right-radius: 15px;
+    text-align: center;
 }
 
 .infographic-container .plant .main {
@@ -115,7 +117,7 @@ html, body, .infographic-container {
 .infographic-container .energy .value {
     color: #FCF602;
     display: block;
-    font-size: 8vh;  font-weight: 300;
+    font-size: 10vh;  font-weight: 300;
 }
 
 .infographic-container .energy .postfix {
@@ -138,7 +140,7 @@ html, body, .infographic-container {
 .infographic-container .melting .value {
     color: #68B0D1;
 
-    font-size: 8vh;  font-weight: 300;
+    font-size: 9vh;  font-weight: 300;
     display: block;
 }
 
@@ -167,7 +169,8 @@ html, body, .infographic-container {
 .infographic-container .matter .value {
     color: #F5CE19;
 
-    font-size: 5vh;
+    font-size: 6vh;
+    display: block;
 }
 
 .infographic-container .matter .detail {
@@ -188,12 +191,14 @@ html, body, .infographic-container {
 .infographic-container .people .value {
     color: #2F3750;
 
-    font-size: 4vh;
+    font-size: 6vh;
+    display: block;
 }
 
 .infographic-container .people .detail {
     color: #FCFCFC;
 
+    font-weight: 100;
 }
 
 .infographic-container .people .detail2 {
@@ -221,8 +226,14 @@ html, body, .infographic-container {
     font-family: "Open Sans";
 }
 
-.matter img {
+.matter img, .people img {
     display: block;
     margin: 0 auto;
-    padding-top: 10px;
+    padding: 10px 0px;
+}
+
+.matter span.postfix {
+    color: white;
+    font-size: 2vh;
+    font-weight: 100;
 }
