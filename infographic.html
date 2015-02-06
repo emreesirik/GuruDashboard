@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title></title>
     <link href="external/bootstrap-3.3.2/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="external/odometer/odometer.css" type="text/css" rel="stylesheet" />
     <link href="css/infographic.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
@@ -23,7 +24,7 @@
                         <div class="col-md-6 full-height">
                              <span class="plant-container vertical-middle">
                                  <span class="main">Might Plant</span>
-                                <span class="value">7334</span>
+                                <span class="value odometer" id="plantValue">0000</span>
                                 <span class="detail">Trees a Year</span>
                             </span>
                         </div>
@@ -38,7 +39,9 @@
                         <div class="col-md-6 full-height">
                             <span class="vertical-middle">
                                 <span class="main">Might Save</span>
-                                <span class="value">400<span class="postfix">kw/h</span></span>
+                                <span class="value">
+                                    <span class="odometer" id="energyValue">0000</span>
+                                    <span class="postfix">kw/h</span></span>
 
                                 <span class="detail">Clean Energy</span>
                             </span>
@@ -56,7 +59,7 @@
                             <span class="vertical-middle">
                                   <span class="main">Might Save</span>
                                     <span class="value">
-                                        856
+                                        <span class="odometer" id="meltingValue">0000</span>
                                         <span class="postfix">
                                             m2
                                         </span>
@@ -69,13 +72,13 @@
                 </div>
                 <div class="col-md-3 info-graphic-box matter">
                     <span class="main">Might Save</span>
-                     <span class="value">1328</span>
+                     <span class="value odometer" id="radioactiveValue">0000</span>
                      <span class="detail">grams Radioactive </span>
                     <span class="detail2"> Matter</span>
                 </div>
                 <div class="col-md-3 info-graphic-box people">
                     <span class="main">Might Prevent</span>
-                    <span class="value">10233</span>
+                    <span class="value odometer" id="diseaseValue">0000</span>
                     <span class="detail">People from</span>
                     <span class="detail2">Respiatory Disease</span>
                 </div>
@@ -87,6 +90,7 @@
 </div>
 <script src="external/jquery-1.11.2/jquery-1.11.2.min.js"></script>
 <script src="external/bootstrap-3.3.2/js/bootstrap.min.js"></script>
+<script src="external/odometer/odometer.min.js"></script>
 <script src="js/InfoGraphic/InfoGraphic.js"></script>
 </body>
 </html>
