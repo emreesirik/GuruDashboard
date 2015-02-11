@@ -35,14 +35,14 @@ app.directive('dashboardmap',['GuruService', function(GuruService) {
             });
 
             $scope.icon = L.icon({
-                iconUrl: 'img/pin.gif',
+                iconUrl: 'img/location.png',
                 /*shadowUrl: 'leaf-shadow.png',*/
 
                 iconSize:     [28, 28], // size of the icon
                 /*shadowSize:   [50, 64], // size of the shadow*/
                 iconAnchor:   [14, 14], // point of the icon which will correspond to marker's location
                 /*shadowAnchor: [4, 62],  // the same for the shadow*/
-                popupAnchor:  [55, 0] // point from which the popup should open relative to the iconAnchor
+                popupAnchor:  [75, 0] // point from which the popup should open relative to the iconAnchor
             });
 
 

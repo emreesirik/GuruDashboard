@@ -3,8 +3,13 @@
         <div id="title">
             <span class="logo">
                 <img src="img/logo.png">
-                <span class="link" ng-class="page == 'dashboard' ? 'active' : ''">Guru Dashboard</span>
-                <span class="link" ng-class="page == 'rank' ? 'active' : ''">Global Rank</span>
+                <span class="links">
+                    <span class="link" ng-class="page == 'dashboard' ? 'active' : ''"><img src="img/dashboardic.png" data-at2x="img/dashboardic@2x.png" > Guru Dashboard</span>
+                    <span class="link" ng-class="page == 'rank' ? 'active' : ''"><img src="img/globalrank.png" data-at2x="img/globalrank@2x.png" > Global Rank
+                    <span class="coming-soon"> (Coming Soon)</span>
+                    </span>
+                </span>
+
             </span>
             <span class="login">
                 <img src="{{userAvatar}}">
@@ -18,8 +23,8 @@
                 <div class="container-fluid">
                     <div class="col-md-4 col-sm-4 full-height spec-card">
                         <div class="spec-chart cpu-container  full-height">
-                            <div class="title">Global % Cpu unused Live</div>
-                            <div class="chart-info">Unused Cpu Usage</div>
+                            <div class="title">Global % CPU unused Live</div>
+                            <div class="chart-info"><img src="img/cpu.png" data-at2x="img/cpu@2x.png">Unused CPU Usage</div>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-md-8 col-sm-8 col-xs-8 full-height">
@@ -53,22 +58,22 @@
                     </div>
                     <div class="col-md-4 col-sm-4 full-height spec-card">
                         <div class="spec-chart gpu-container  full-height">
-                            <div class="title">Global % Gpu usage Live</div>
-                            <div class="chart-info">Unused Gpu Usage</div>
+                            <div class="title">Global % GPU usage Live</div>
+                            <div class="chart-info"><img src="img/gpu.png" data-at2x="img/gpu@2x.png">Unused GPU Usage</div>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-md-8 col-sm-8 col-xs-8 full-height">
                                         <div class="row specs">
                                             <div class="col-md-4 col-sm-4 col-xs-4 full-height spec-separator">
-                                                <span class="valueTitle">TOTAL</span>
+                                                <span class="valueTitle">Total</span>
                                                 <div class="value">{{gpu.total}}</div>
                                             </div>
                                             <div class="col-md-4 col-sm-4 col-xs-4 full-height spec-separator">
-                                                <span class="valueTitle">UNUSED</span>
+                                                <span class="valueTitle">Unused</span>
                                                 <div class="value">{{gpu.unused}}</div>
                                             </div>
                                             <div class="col-md-4 col-sm-4 col-xs-4 full-height">
-                                                <span class="valueTitle">USED</span>
+                                                <span class="valueTitle">Used</span>
                                                 <div class="value">
                                                     {{gpu.used}}
                                                 </div>
@@ -87,22 +92,22 @@
                     </div>
                     <div class="col-md-4 col-sm-4 full-height spec-card">
                         <div class="spec-chart ram-container  full-height">
-                            <div class="title">Global % Ram unused live</div>
-                            <div class="chart-info">Unused Ram Usage</div>
+                            <div class="title">Global % RAM unused live</div>
+                            <div class="chart-info"><img src="img/ram.png" data-at2x="img/ram@2x.png">Unused RAM Usage</div>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-md-8 col-sm-8 col-xs-8 full-height">
                                         <div class="row specs">
                                             <div class="col-md-4 col-sm-4 col-xs-4 full-height spec-separator">
-                                                <span class="valueTitle">TOTAL</span>
+                                                <span class="valueTitle">Total</span>
                                                 <div class="value">{{ram.total}}</div>
                                             </div>
                                             <div class="col-md-4 col-sm-4 col-xs-4 full-height spec-separator">
-                                                <span class="valueTitle">UNUSED</span>
+                                                <span class="valueTitle">Unused</span>
                                                 <div class="value">{{ram.unused}}</div>
                                             </div>
                                             <div class="col-md-4 col-sm-4 col-xs-4 full-height">
-                                                <span class="valueTitle">USED</span>
+                                                <span class="valueTitle">Used</span>
                                                 <div class="value">
                                                     {{ram.used}}
                                                 </div>
@@ -126,7 +131,7 @@
                     <div class="container-fluid">
                         <div class="row full-height mini-charts">
                             <div class="col-md-3 col-sm-3 full-height">
-                                <span class="card-title">Guru Score</span>
+                                <span class="card-title"><img src="img/guruscore.png" data-at2x="img/guruscore@2x.png">Guru Score</span>
                                 <div class="card-container guru-score">
                                     <div class="title">Calculated Guru Score</div>
                                     <div class="value odometer" ng-model="guruPoint" format="d">0</div>
@@ -135,7 +140,7 @@
                             </div>
                             <div class="col-md-5 col-sm-5 full-height">
                                 <div class="col-md-6 col-sm-6 full-height">
-                                    <span class="card-title">Kw/h USED and WASTED</span>
+                                    <span class="card-title"><img src="img/bulb.png" data-at2x="img/bulb@2x.png">Kw/h USED and WASTED</span>
                                     <div class="card-container">
                                         <div class="energy-chart">
                                             <input ng-model="energy.ratio" data-width="100" type="text" value="100" readonly data-displayInput=false class="knobchart" data-fgColor="#5996EA" data-angleOffset=-125 data-angleArc=250 data-thickness=.16>
@@ -149,7 +154,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6 full-height">
-                                    <span class="card-title">Mouse Travelled</span>
+                                    <span class="card-title"><img src="img/mouse.png" data-at2x="img/mouse@2x.png">Mouse Travelled</span>
                                     <div class="card-container">
                                         <div class="energy-chart">
                                             <input data-width="100" type="text" value="100" readonly data-displayInput=false class="knobchart" data-fgColor="#956CB0" data-angleOffset=-125 data-angleArc=250 data-thickness=.16>
@@ -170,13 +175,12 @@
                             </div>
 
                             <div class="col-md-4 col-sm-4 full-height  user">
-                                <dashboardmap id="dashboardMap" class="card-container" ng-model="position">
+                                <span class="card-title"><img src="img/userconnected.png" data-at2x="img/userconnected@2x.png">User Connected</span>
+                                <div class="card-container">
+                                    <dashboardmap id="dashboardMap" class="card-container" ng-model="position"/>
+                                </div>
 
-                                </dashboardmap>
                             </div>
-                            <!--<div class="col-md-6 col-sm-6 full-height user">
-
-                            </div>-->
                         </div>
 
                     </div>

@@ -51,7 +51,7 @@
     height: 11%;
 
     color: #5F6675;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: normal;
     display: block;
     line-height: 13px;
@@ -62,7 +62,7 @@
 }
 
 .user .card-container {
-    height: 81%;
+    height: 89%;
 }
 
 .user .card-container#dashboardMap{
@@ -242,13 +242,16 @@ span.circular-chart-percent {
     color: white;
     font-size: 14px;
     padding: 0 15px;
+    line-height: 50px;
+    height: 100%;
+    display: inline-block;
 }
 .link:hover {
     cursor: pointer;
 }
 
 .link.active {
-    text-decoration: underline;
+    border-bottom: 5px solid #5EB7EF;
 }
 span .name {
     font-weight: normal;
@@ -339,4 +342,33 @@ span .name {
         padding-top: 5px;
         padding-bottom: 5px;
     }
+}
+
+.card-title img {
+    position: relative;
+    top: -2px;
+    padding-right: 5px;
+}
+
+.link img {
+    height: auto;
+    position: relative;
+    top: -2px;
+}
+
+.chart-info img {
+    position: relative;
+    top: -2px;
+    padding-right: 3px;
+}
+
+span.links {
+    position: relative;
+    left: -5px;
+}
+
+.coming-soon {
+    color: rgba(214, 214, 214, 1);
+    font-size: 12px;
+    font-weight: 100;
 }
