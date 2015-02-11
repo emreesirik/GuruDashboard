@@ -1,0 +1,58 @@
+{
+  "computed": {
+    "plants": 7334,
+    "energy": {"value": 400, "unit": "kWh"},
+    "floe": {"value": 856, "unit": "m²"},
+    "radioactiveMatter": {"value": 1328, "unit": "g"},
+    "diseased":10233
+  },
+  "data": {
+    "latitude": 33.9776992798,
+    "longitude": -118.435096741,
+    "country": "United States",
+    "region": "TX",
+    "city": "Dallas",
+    "cpu": {"type": "i7", "coreCount": 8, "frequency": 2.8},
+    "energy": {"used": 96, "wasted": 26, "unit": "kWh"}
+  },
+  "graphs": {
+    "cpu": [
+      {"time": 1418311740954, "cpuPercent": 56.0},
+      {"time": 1418311800954, "cpuPercent": 36.0},
+      {"time": 1418311860954, "cpuPercent": 26.0},
+      {"time": 1418311740954, "cpuPercent": 52.0},
+      {"time": 1418311800954, "cpuPercent": 33.0},
+      {"time": 1418311860954, "cpuPercent": 24.0}
+    ],
+    "gpu": [
+      {"time": 1418311740954, "used": 1100000, "total": 10000000},
+      {"time": 1418311800954, "used": 2200000, "total": 10000000},
+      {"time": 1418311860954, "used": 4130000, "total": 10000000},
+      {"time": 1418311740954, "used": 5400000, "total": 10000000},
+      {"time": 1418311800954, "used": 3100000, "total": 10000000},
+      {"time": 1418311860954, "used": 2200000, "total": 10000000}
+    ],
+    "ram": [
+      {"time": 1418311740954, "used": 3200000, "total": 10000000},
+      {"time": 1418311800954, "used": 4400000, "total": 10000000},
+      {"time": 1418311860954, "used": 5200000, "total": 10000000},
+      {"time": 1418311740954, "used": 3100000, "total": 10000000},
+      {"time": 1418311800954, "used": 2900000, "total": 10000000},
+      {"time": 1418311860954, "used": 1800000, "total": 10000000}
+    ],
+    "guruPoints": [
+      {"time": 1418311740954, "point": 42323},
+      {"time": 1418311800954, "point": 40000},
+      {"time": 1418311860954, "point": 44400},
+      {"time": 1418311740954, "point": 42323},
+      {"time": 1418311800954, "point": 42000},
+      {"time": 1418311860954, "point": 44400},
+      {"time": 1418311740954, "point": 42323},
+      {"time": 1418311800954, "point": 44300},
+      {"time": 1418311860954, "point": 44400},
+      {"time": 1418311740954, "point": 42323},
+      {"time": 1418311800954, "point": 45000},
+      {"time": 1418311860954, "point": 44300}
+    ]
+  }
+}

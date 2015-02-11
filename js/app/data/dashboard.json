@@ -1,0 +1,31 @@
+{
+  "guruPoint": 1526,
+  "guruPointChartData": [
+    1520,
+    1600,
+    1540,
+    1800,
+    1600
+  ],
+  "positionLatitude": 36.42,
+  "positionLongitude": 42,
+  "location":"Dallas TX",
+  "cpuType": "i7",
+  "cpuCoreCount": "8",
+  "cpuRate": "2.8 Ghz",
+  "gpuTotalRam":"2GB",
+  "gpuUnusedRam":"1.3GB",
+  "gpuUsedRam":"1.7GB",
+  "ramTotal":"16GB",
+  "ramUnused":"12GB",
+  "ramUsed":"4GB",
+  "energyUsed": 96,
+  "energyWasted":26,
+  "energyPostfix": "kw/h",
+  "mouseTravelToday":102,
+  "mouseTravelPostfix":"miles",
+  "mouseTravelDate":"Today",
+  "userAvatar": "js/app/data/photo.jpg",
+  "name":"Emre",
+  "surname":"Esirik"
+}

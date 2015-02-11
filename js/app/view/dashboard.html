@@ -1,0 +1,186 @@
+<div id="dashboard">
+    <div class="container-box">
+        <div id="title">
+            <span class="logo">
+                <img src="img/logo.png">
+                <span class="link" ng-class="page == 'dashboard' ? 'active' : ''">Guru Dashboard</span>
+                <span class="link" ng-class="page == 'rank' ? 'active' : ''">Global Rank</span>
+            </span>
+            <span class="login">
+                <img src="{{userAvatar}}">
+                <span class="name">{{name}}</span>
+                <span class="surname">{{surname}}</span>
+            </span>
+        </div>
+        <div class="container-fluid">
+
+            <div class="row  dashboard-row">
+                <div class="container-fluid">
+                    <div class="col-md-4 col-sm-4 full-height spec-card">
+                        <div class="spec-chart cpu-container  full-height">
+                            <div class="title">Global % Cpu unused Live</div>
+                            <div class="chart-info">Unused Cpu Usage</div>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-8 col-xs-8 full-height">
+                                        <div class="row specs">
+                                            <div class="col-md-4 col-sm-4 col-xs-4 full-height spec-separator">
+                                                <span class="valueTitle">Processor</span>
+                                                <div class="value">{{cpu.type}}</div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 full-height spec-separator">
+                                                <span class="valueTitle">Core</span>
+                                                <div class="value">{{cpu.core}}</div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 full-height">
+                                                <span class="valueTitle">Cpu Rate</span>
+                                                <div class="value">
+                                                    {{cpu.rate}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4 full-height">
+                                        <span class="chart" easypiechart percent="cpuPercent" options="cpuChartOptions">
+                                                    <span class="circular-chart-percent">{{cpuPercent}}%</span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <linechart ng-model="cpuUsageData" class="chart" color="#737C7F" valuekey="cpuPercent"></linechart>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 full-height spec-card">
+                        <div class="spec-chart gpu-container  full-height">
+                            <div class="title">Global % Gpu usage Live</div>
+                            <div class="chart-info">Unused Gpu Usage</div>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-8 col-xs-8 full-height">
+                                        <div class="row specs">
+                                            <div class="col-md-4 col-sm-4 col-xs-4 full-height spec-separator">
+                                                <span class="valueTitle">TOTAL</span>
+                                                <div class="value">{{gpu.total}}</div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 full-height spec-separator">
+                                                <span class="valueTitle">UNUSED</span>
+                                                <div class="value">{{gpu.unused}}</div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 full-height">
+                                                <span class="valueTitle">USED</span>
+                                                <div class="value">
+                                                    {{gpu.used}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4 full-height">
+                                        <span class="chart" easypiechart percent="gpuPercent" options="gpuChartOptions">
+                                                <span class="circular-chart-percent">{{gpuPercent}}%</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <linechart ng-model="gpuUsageData" class="chart" color="#78CDEF" valuekey="unused"></linechart>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 full-height spec-card">
+                        <div class="spec-chart ram-container  full-height">
+                            <div class="title">Global % Ram unused live</div>
+                            <div class="chart-info">Unused Ram Usage</div>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-8 col-xs-8 full-height">
+                                        <div class="row specs">
+                                            <div class="col-md-4 col-sm-4 col-xs-4 full-height spec-separator">
+                                                <span class="valueTitle">TOTAL</span>
+                                                <div class="value">{{ram.total}}</div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 full-height spec-separator">
+                                                <span class="valueTitle">UNUSED</span>
+                                                <div class="value">{{ram.unused}}</div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 full-height">
+                                                <span class="valueTitle">USED</span>
+                                                <div class="value">
+                                                    {{ram.used}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4 full-height">
+                                        <span class="chart" easypiechart percent="ramPercent" options="ramChartOptions">
+                                                <span class="circular-chart-percent">{{ramPercent}}%</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <linechart ng-model="ramUsageData" class="chart" color="#57DDC3" valuekey="unused"></linechart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row dashboard-row bottom-part">
+                    <div class="container-fluid">
+                        <div class="row full-height mini-charts">
+                            <div class="col-md-3 col-sm-3 full-height">
+                                <span class="card-title">Guru Score</span>
+                                <div class="card-container guru-score">
+                                    <div class="title">Calculated Guru Score</div>
+                                    <div class="value odometer" ng-model="guruPoint" format="d">0</div>
+                                    <linechart ng-model="guruPointData" class="chart" color="#d86ff1" renderer="line" valuekey="point"></linechart>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-sm-5 full-height">
+                                <div class="col-md-6 col-sm-6 full-height">
+                                    <span class="card-title">Kw/h USED and WASTED</span>
+                                    <div class="card-container">
+                                        <div class="energy-chart">
+                                            <input ng-model="energy.ratio" data-width="100" type="text" value="100" readonly data-displayInput=false class="knobchart" data-fgColor="#5996EA" data-angleOffset=-125 data-angleArc=250 data-thickness=.16>
+                                        </div>
+                                        <div class="energy-info">
+                                                <span class="value odometer" ng-model="energy.wasted" format="d">0</span>
+                                                <span class="postfix">{{energy.postfix}}</span>
+
+                                            <div class="text">Wasted</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 full-height">
+                                    <span class="card-title">Mouse Travelled</span>
+                                    <div class="card-container">
+                                        <div class="energy-chart">
+                                            <input data-width="100" type="text" value="100" readonly data-displayInput=false class="knobchart" data-fgColor="#956CB0" data-angleOffset=-125 data-angleArc=250 data-thickness=.16>
+                                        </div>
+                                        <div class="energy-info">
+                                            <span ng-show="isShowTravel">
+                                                <span class="value odometer" ng-model="travel.distance" format="d">0</span>
+                                                <span class="postfix">{{travel.postfix}}</span>
+                                                <div class="text">Today</div>
+                                            </span>
+                                            <span ng-hide="isShowTravel" class="text">
+                                                Coming Soon
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-4 full-height  user">
+                                <dashboardmap id="dashboardMap" class="card-container" ng-model="position">
+
+                                </dashboardmap>
+                            </div>
+                            <!--<div class="col-md-6 col-sm-6 full-height user">
+
+                            </div>-->
+                        </div>
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,46 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <link href="external/bootstrap-3.3.2/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-    <link href="external/odometer/odometer.css" type="text/css" rel="stylesheet" />
-    <link href="css/infographic.css" type="text/css" rel="stylesheet" />
-</head>
-<body>
 <div class="infographic-container">
     <div class="container-box">
         <div id="title">Overal Assetment by Optimizing Your Computers Resources
-            <span id="dashboard-link">Continue to GURU Usage Dashboard </span>
+            <span id="dashboard-link" ng-click="onDashboardClick()">Continue to GURU Usage Dashboard </span>
         </div>
         <div class="container-fluid">
             <div class="row info-graphic-row">
-                <div class="col-md-6 info-graphic-box plant">
+                <div class="col-md-6 col-sm-6 info-graphic-box plant">
                     <div class="row full-height">
-                        <div class="col-md-6 full-height">
+                        <div class="col-md-6 col-sm-6 col-xs-6 full-height">
                             <img src="img/wind2.svg" alt="Monkey face" style="width: auto; height: 90%;">
                         </div>
-                        <div class="col-md-6 full-height">
+                        <div class="col-md-6 col-sm-6 col-xs-6 full-height">
                              <span class="plant-container vertical-middle">
                                  <span class="main">Might Plant</span>
-                                <span class="value odometer" id="plantValue">0000</span>
+                                <span class="value odometer" id="plantValue" ng-model="plant">0</span>
                                 <span class="detail">Trees a Year</span>
                             </span>
                         </div>
                     </div>
 
                 </div>
-                <div class="col-md-6 info-graphic-box energy">
+                <div class="col-md-6 col-sm-6 info-graphic-box energy">
                     <div class="row full-height">
-                        <div class="col-md-6 full-height">
+                        <div class="col-md-6 col-sm-6 col-xs-6 full-height">
                             <img src="img/wind2.svg" alt="Monkey face" style="width: auto; height: 90%;">
                         </div>
-                        <div class="col-md-6 full-height">
+                        <div class="col-md-6 col-sm-6 col-xs-6  full-height">
                             <span class="vertical-middle">
                                 <span class="main">Might Save</span>
                                 <span class="value">
-                                    <span class="odometer" id="energyValue">0000</span>
-                                    <span class="postfix">kw/h</span></span>
+                                    <span class="odometer" id="energyValue" ng-model="energy.value">0</span>
+                                    <span class="postfix">{{energy.unit}}</span></span>
 
                                 <span class="detail">Clean Energy</span>
                             </span>
@@ -48,19 +38,19 @@
                     </div>
                 </div>
             </div>
-            <div class="row info-graphic-row">
-                <div class="col-md-6 info-graphic-box melting">
+            <div class="row info-graphic-row bottom">
+                <div class="col-md-6 col-sm-6 info-graphic-box melting">
                     <div class="row full-height">
-                        <div class="col-md-6 full-height">
+                        <div class="col-md-6 col-sm-6 col-xs-6  full-height">
                             <img src="img/wind2.svg" alt="Monkey face" style="width: auto; height: 90%;">
                         </div>
-                        <div class="col-md-6 full-height">
+                        <div class="col-md-6 col-sm-6 col-xs-6  full-height">
                             <span class="vertical-middle">
                                   <span class="main">Might Save</span>
                                     <span class="value">
-                                        <span class="odometer" id="meltingValue">0000</span>
+                                        <span class="odometer" id="meltingValue" ng-model="melting.value">0</span>
                                         <span class="postfix">
-                                            m2
+                                            {{melting.unit}}
                                         </span>
                                     </span>
                                      <span class="detail">Floe from </span>
@@ -69,32 +59,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 info-graphic-box matter">
+                <div class="col-md-3 col-sm-3 info-graphic-box matter">
                     <img src="img/wind2.svg" alt="Monkey face" style="width: auto; height: 40%;">
                     <span class="main">Might Save</span>
                      <span class="value">
-                         <span class="odometer" id="radioactiveValue">0000</span>
-                         <span class="postfix">grams</span>
+                         <span class="odometer" id="radioactiveValue" ng-model="matter.value">0</span>
+                         <span class="postfix">{{matter.unit}}</span>
                      </span>
-                     <span class="detail">Radioactive </span>
+                    <span class="detail">Radioactive </span>
                     <span class="detail2"> Matter</span>
                 </div>
-                <div class="col-md-3 info-graphic-box people">
+                <div class="col-md-3 col-sm-3 info-graphic-box people">
                     <img src="img/wind2.svg" alt="Monkey face" style="width: auto; height: 40%;">
                     <span class="main">Might Prevent</span>
-                    <span class="value odometer" id="diseaseValue">0000</span>
+                    <span class="value odometer" id="diseaseValue" ng-model="disease">0</span>
                     <span class="detail">People from</span>
                     <span class="detail2">Respiatory Disease</span>
                 </div>
             </div>
         </div>
-
     </div>
 
 </div>
-<script src="external/jquery-1.11.2/jquery-1.11.2.min.js"></script>
-<script src="external/bootstrap-3.3.2/js/bootstrap.min.js"></script>
-<script src="external/odometer/odometer.min.js"></script>
-<script src="js/InfoGraphic/InfoGraphic.js"></script>
-</body>
-</html>

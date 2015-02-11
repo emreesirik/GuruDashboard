@@ -1,0 +1,342 @@
+
+
+#dashboard {
+    /*background: linear-gradient( #654F73, #9696D4);*/
+    background: #e6eaeb;
+    position: relative;
+
+    font-size: 17px;
+    font-family: "Montserrat";
+}
+
+#dashboard .container-box {
+    float: none;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: #EDF0F1;
+    top: 50%;
+    position: relative;
+    transform: translate(0%, -50%);
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;         -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3), 0 0 58px rgba(0, 0, 0, 0.1) inset;
+}
+
+#dashboard div#title {
+    color: #27333B;
+    font-weight: 600;
+    line-height: 50px;
+    height: 50px;
+    width: 100%;
+    padding-right: 15px;
+    background: #344563;
+    position: absolute;
+}
+
+#dashboard .container-fluid {
+    height: 93%;
+}
+
+#dashboard .container-fluid .info-graphic-row {
+    height: 50%;
+}
+
+#dashboard .dashboard-row {
+    height: 50%;
+    padding: 0px;
+    padding-top: 70px;
+    margin: 0px;
+}
+.card-title {
+    height: 11%;
+
+    color: #5F6675;
+    font-size: 15px;
+    font-weight: normal;
+    display: block;
+    line-height: 13px;
+}
+.card-container {
+    height: 89%;
+    background: #FFFFFF;
+}
+
+.user .card-container {
+    height: 81%;
+}
+
+.user .card-container#dashboardMap{
+    display: block;
+    height: 100%;
+}
+
+
+.cpu-container {
+    background: #405054;
+
+}
+
+.gpu-container {
+    background: #097099;
+
+}
+
+.ram-container {
+    background: #2C3E50;
+
+}
+
+.mini-charts {
+    margin: 0px;
+}
+
+.guru-score .title {
+    color: #686E7C;
+
+    font-size: 2.5vh;
+    padding-top: 10%;
+}
+
+.guru-score .value {
+    font-size: 6vh;
+    padding-top: 8%;
+
+}
+
+.guru-score .chart {
+    padding-top: 10%;
+
+    height: 45%;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    /* background: red; */
+}
+
+.card-container.guru-score {
+    text-align: center;
+    color: #2B3D44;
+}
+
+.leaflet-container .leaflet-control-attribution, .leaflet-container .leaflet-control-scale {
+    font-size: 9px;
+}
+.energy-chart canvas {
+    /* transform: translate(7%, -18%) rotate(-75deg); */
+}
+.card-container canvas {
+    /* margin: 0 auto; */
+    /* display: block; */
+}
+
+.energy-chart {
+    height: 60%;
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 11%;
+}
+
+.energy-info {
+    height: 40%;
+    text-align: center;
+    font-size: 4.3vh;
+    color: #707B87;
+}
+
+.spec-chart .title {
+    height: 15%;
+    color: white;
+    padding: 1px 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.spec-chart .info{
+    height: 40%;
+    text-align: center;
+}
+.spec-chart .info .chart {
+    height: 80px;
+    /* display: block; */
+    position: absolute;
+    top: -15px;
+    right: 40px;
+}
+
+.spec-chart .chart {
+    height: 30%;
+    display: block;
+}
+
+.spec-chart .value {
+    color: #B0B7B8;
+
+    font-size: 1.7vh;
+}
+
+.spec-chart .valueTitle {
+    font-size: 1.7vh;
+
+    color: #949A9B;
+}
+
+.row.specs {
+    margin-right: 0px;
+    margin-left: 0px;
+    position: relative;
+    left: 25px;
+}
+
+.spec-separator {
+    border-right: 1px solid #303A3D;
+}
+
+.gpu-container .spec-separator{
+    border-right: 1px solid #767B7C;
+}
+
+.ram-container .spec-separator{
+    border-right: 1px solid #57636C;
+}
+
+.energy-info span.postfix {
+    font-size: 2vh;
+    color: #C0C8D0;
+}
+
+.energy-info .text {
+    font-size: 2.5vh;
+    color: #BFC4CE;
+}
+
+span.circular-chart-percent {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+.login {
+    height: 100%;
+    float: right;
+    line-height: 50px;
+    color: white;
+    font-size: 13px;
+}
+.login img{
+    height: 30px;
+    border-radius: 50px;
+    left: -5px;
+    position: relative;
+}
+.dashboard-row.bottom-part {
+    padding-top: 20px !important;
+}
+
+.logo img {
+    height: 50px;
+    padding: 0px 0px;
+}
+
+.link {
+    color: white;
+    font-size: 14px;
+    padding: 0 15px;
+}
+.link:hover {
+    cursor: pointer;
+}
+
+.link.active {
+    text-decoration: underline;
+}
+span .name {
+    font-weight: normal;
+}
+
+.chart-info {
+    height: 15%;
+    font-size: 13px;
+    color: white;
+    font-weight: normal;
+    padding-left: 14px;
+}
+
+.energy-chart div:first-child {
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+.dashboard-row .spec-card {
+    padding: 5px 8px;
+}
+
+#dashboardMap a.leaflet-control-zoom-in, a.leaflet-control-zoom-out,a.leaflet-control-zoom-in:hover, a.leaflet-control-zoom-out:hover {
+    background: #74caa9;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+#dashboard a.leaflet-control-zoom-in:hover, #dashboard a.leaflet-control-zoom-out:hover {
+    background: #4A7B68;
+}
+
+#dashboardMap .leaflet-control-zoom.leaflet-bar.leaflet-control {
+    box-shadow: none;
+}
+
+#dashboardMap .leaflet-bar a:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+#dashboardMap .leaflet-bar a:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom: none;
+}
+
+#dashboardMap .leaflet-popup-tip-container {
+    display: none;
+}
+
+#dashboardMap .leaflet-popup-content-wrapper {
+    background: rgba(0, 0, 0, 0.74);
+    color: white;
+    font-family: "Montserrat";
+    box-shadow: none;
+    border-radius: 3px;
+}
+
+#dashboardMap .leaflet-popup-content {
+    line-height: 0px;
+    margin: 8px 8px;
+}
+
+.user {
+    margin: 0px;
+    padding: 0px;
+}
+
+@media screen and (max-width: 767px) {
+    #dashboard .container-fluid {
+        height: auto;
+    }
+    .user {
+        min-height: 300px;
+    }
+    .user .card-container#dashboardMap {
+        min-height: 300px;
+    }
+
+    #dashboard .container-box {
+        overflow-x: hidden;
+    }
+    div[class*="col-sm"] {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}

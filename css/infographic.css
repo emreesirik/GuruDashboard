@@ -1,22 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,600);
-
-html, body, .infographic-container {
-    /* Height and width fallback for older browsers. */
-    height: 100%;
-    width: 100%;
-
-    /* Set the height to match that of the viewport. */
-    height: 100vh;
-
-    /* Set the width to match that of the viewport. */
-    width: 100vw;
-
-    /* Remove any browser-default margins. */
-    margin: 0;
-}
-
 .infographic-container {
-    background: linear-gradient( #654F73, #9696D4);
+    /*background: linear-gradient( #654F73, #9696D4);*/
+    background: #e6eaeb;
     position: relative;
     font-family: "Open Sans";
     font-size: 17px;
@@ -26,13 +10,13 @@ html, body, .infographic-container {
     width: 70%;
     height: 75%;
     margin: 0 auto;
-    background: #29344C;
-    border-radius: 15px;
+    /* background: #29344C; */
+    /* border-radius: 15px; */
     top: 50%;
     position: relative;
     transform: translate(0%, -50%);
-    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;         -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.3), 0 0 58px rgba(0, 0, 0, 0.1) inset;
+    /* -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; */         -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    /* box-shadow: 0 10px 5px rgba(0, 0, 0, 0.3), 0 0 58px rgba(0, 0, 0, 0.1) inset; */
 }
 
 .infographic-container div#title {
@@ -41,6 +25,7 @@ html, body, .infographic-container {
     line-height: 50px;
     height: 10%;
     padding: 0px 15px;
+    background: #29344C;
 }
 
 .infographic-container .container-fluid {
@@ -61,6 +46,10 @@ html, body, .infographic-container {
     font-weight: 300;
 }
 
+.infographic-container #dashboard-link:hover {
+    cursor: pointer;
+}
+
 .infographic-container .plant {
     background: #52C3C0;
 
@@ -73,7 +62,7 @@ html, body, .infographic-container {
 
 .infographic-container .melting {
     background: #29344C;
-    border-bottom-left-radius: 15px;
+    /* border-bottom-left-radius: 15px; */
 }
 
 .infographic-container .matter {
@@ -83,7 +72,7 @@ html, body, .infographic-container {
 
 .infographic-container .people {
     background: #AB81B6;
-    border-bottom-right-radius: 15px;
+    /* border-bottom-right-radius: 15px; */
     text-align: center;
 }
 
@@ -140,7 +129,7 @@ html, body, .infographic-container {
 .infographic-container .melting .value {
     color: #68B0D1;
 
-    font-size: 9vh;  font-weight: 300;
+    font-size: 8vh;  font-weight: 300;
     display: block;
 }
 
@@ -218,10 +207,6 @@ html, body, .infographic-container {
     display: block;
 }
 
-.full-height {
-    height: 100%;
-}
-
 .odometer-value{
     font-family: "Open Sans";
 }
@@ -236,4 +221,80 @@ html, body, .infographic-container {
     color: white;
     font-size: 2vh;
     font-weight: 100;
+}
+
+@media screen and (max-width: 1160px) {
+    .infographic-container {
+        font-size: 13px;
+    }
+    .info-graphic-row.bottom {
+        position: relative;
+        top: -28px;
+    }
+
+    .infographic-container .energy .value {
+        font-size: 7vh;
+    }
+
+    .infographic-container .plant .value {
+        font-size: 6vh;
+    }
+
+    .infographic-container .melting .value {
+        font-size: 6vh;
+    }
+
+    .infographic-container .people .value {
+        font-size: 4vh;
+    }
+}
+
+
+@media screen and (max-width: 912px) {
+    .infographic-container div#title {
+        font-size: 11px;
+    }
+    .infographic-container .energy .value {
+        font-size: 6vh;
+    }
+
+    .infographic-container .plant .value {
+        font-size: 5vh;
+    }
+
+    .infographic-container .melting .value {
+        font-size: 5vh;
+    }
+
+    .infographic-container .people .value {
+        font-size: 3vh;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .infographic-container .melting .value {
+        font-size: 4vh;
+    }
+    .infographic-container .energy .value {
+        font-size: 5vh;
+    }
+
+    .infographic-container .plant .value {
+        font-size: 4vh;
+    }
+
+    .infographic-container .melting .value {
+        font-size: 5vh;
+    }
+
+    .infographic-container .people .value {
+        font-size: 2vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .infographic-container .melting .value {
+        font-size: 7vh;
+    }
+
 }

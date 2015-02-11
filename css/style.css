@@ -1,0 +1,23 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,600);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:300italic,400italic,700italic,300,400,600);
+
+
+html, body, #dashboard,.infographic-container{
+    /* Height and width fallback for older browsers. */
+    height: 100%;
+    width: 100%;
+
+    /* Set the height to match that of the viewport. */
+    height: 100vh;
+
+    /* Set the width to match that of the viewport. */
+    width: 100vw;
+
+    /* Remove any browser-default margins. */
+    margin: 0;
+    font-family: "Open Sans";
+}
+
+.full-height {
+    height: 100%;
+}
