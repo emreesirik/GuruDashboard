@@ -42,7 +42,7 @@ app.directive('dashboardmap',['GuruService', function(GuruService) {
                 /*shadowSize:   [50, 64], // size of the shadow*/
                 iconAnchor:   [14, 14], // point of the icon which will correspond to marker's location
                 /*shadowAnchor: [4, 62],  // the same for the shadow*/
-                popupAnchor:  [75, 0] // point from which the popup should open relative to the iconAnchor
+                popupAnchor:  [100, 0] // point from which the popup should open relative to the iconAnchor
             });
 
 
@@ -52,12 +52,13 @@ app.directive('dashboardmap',['GuruService', function(GuruService) {
                     //L.marker([51.5, -0.09], {icon: greenIcon}).addTo($scope.map);
                     /*L.marker([$scope.value.x, $scope.value.y]).addTo($scope.map);*/
                     var marker = L.marker([$scope.value.x, $scope.value.y],{icon: $scope.icon}).bindPopup($scope.value.popup,{closeButton:false}).addTo($scope.map);
-                    marker.on('mouseover', function (e) {
+                    marker.openPopup();
+                    /*marker.on('mouseover', function (e) {
                         this.openPopup();
                     });
                     marker.on('mouseout', function (e) {
                         this.closePopup();
-                    });
+                    });*/
                 }
             });
         }

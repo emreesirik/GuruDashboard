@@ -1,7 +1,7 @@
 {
   "computed": {
     "plants": 7334,
-    "energy": {"value": 400, "unit": "kWh"},
+    "energy": {"used": 400,"wasted":200, "unit": "kWh"},
     "floe": {"value": 856, "unit": "m²"},
     "radioactiveMatter": {"value": 1328, "unit": "g"},
     "diseased":10233
@@ -12,8 +12,8 @@
     "country": "United States",
     "region": "TX",
     "city": "Dallas",
-    "cpu": {"type": "i7", "coreCount": 8, "frequency": 2.8},
-    "energy": {"used": 96, "wasted": 26, "unit": "kWh"}
+    "cpu": {"brand": "i7", "coreCount": 8, "frequency": 2.8},
+    "travel": {"distance":100,"postfix":"meter"}
   },
   "graphs": {
     "cpu": [

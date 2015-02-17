@@ -1,10 +1,8 @@
 
 
 #dashboard {
-    /*background: linear-gradient( #654F73, #9696D4);*/
     background: #e6eaeb;
     position: relative;
-
     font-size: 17px;
     font-family: "Montserrat";
 }
@@ -15,11 +13,7 @@
     height: 100%;
     margin: 0 auto;
     background: #EDF0F1;
-    top: 50%;
     position: relative;
-    transform: translate(0%, -50%);
-    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;         -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3), 0 0 58px rgba(0, 0, 0, 0.1) inset;
 }
 
 #dashboard div#title {
@@ -34,7 +28,7 @@
 }
 
 #dashboard .container-fluid {
-    height: 93%;
+    height: 95%;
 }
 
 #dashboard .container-fluid .info-graphic-row {
@@ -42,9 +36,9 @@
 }
 
 #dashboard .dashboard-row {
-    height: 50%;
+    height: 54%;
     padding: 0px;
-    padding-top: 70px;
+    padding-top: 100px;
     margin: 0px;
 }
 .card-title {
@@ -55,10 +49,13 @@
     font-weight: normal;
     display: block;
     line-height: 13px;
+    z-index: 1000;
+    position: relative;
 }
 .card-container {
     height: 89%;
     background: #FFFFFF;
+    position: relative;
 }
 
 .user .card-container {
@@ -110,7 +107,6 @@
     width: 80%;
     margin: 0 auto;
     display: block;
-    /* background: red; */
 }
 
 .card-container.guru-score {
@@ -121,13 +117,7 @@
 .leaflet-container .leaflet-control-attribution, .leaflet-container .leaflet-control-scale {
     font-size: 9px;
 }
-.energy-chart canvas {
-    /* transform: translate(7%, -18%) rotate(-75deg); */
-}
-.card-container canvas {
-    /* margin: 0 auto; */
-    /* display: block; */
-}
+
 
 .energy-chart {
     height: 60%;
@@ -137,10 +127,13 @@
 }
 
 .energy-info {
-    height: 40%;
+    position: absolute;
     text-align: center;
     font-size: 4.3vh;
     color: #707B87;
+    bottom: 8px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .spec-chart .title {
@@ -214,6 +207,10 @@ span.circular-chart-percent {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ie-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
     color: white;
 }
 .login {
@@ -231,6 +228,8 @@ span.circular-chart-percent {
 }
 .dashboard-row.bottom-part {
     padding-top: 20px !important;
+    position: relative;
+    height: 46% !important;
 }
 
 .logo img {
@@ -324,25 +323,6 @@ span .name {
     padding: 0px;
 }
 
-@media screen and (max-width: 767px) {
-    #dashboard .container-fluid {
-        height: auto;
-    }
-    .user {
-        min-height: 300px;
-    }
-    .user .card-container#dashboardMap {
-        min-height: 300px;
-    }
-
-    #dashboard .container-box {
-        overflow-x: hidden;
-    }
-    div[class*="col-sm"] {
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-}
 
 .card-title img {
     position: relative;
@@ -371,4 +351,142 @@ span.links {
     color: rgba(214, 214, 214, 1);
     font-size: 12px;
     font-weight: 100;
+}
+
+.computer-list {
+    position: absolute;
+    margin: 0 auto;
+    top: 60px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.computers img {
+    position: relative;
+    top: -20px;
+    left: 50px;
+}
+
+span.computers {
+    line-height: 55px;
+}
+
+span.computers:hover {
+    cursor: pointer;
+}
+
+span.knob-chart {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.knob-chart div {
+    top: 50%;
+    transform: translate(0%, -50%);
+    -webit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -ie-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    position: relative;
+    display: block !important;
+    margin: 0 auto;
+}
+
+.knob-icon img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ie-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+
+}
+
+span.comming-soon {
+    font-weight: 100;
+    color: rgb(183, 182, 182);
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+.guru-score span.comming-soon {
+    position: relative;
+    bottom: 40px;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1184px) {
+    .spec-chart .info .chart {
+        transform: scale(0.7) translate(28px,0px);
+        -webkit-transform: scale(0.7) translate(28px,0px);
+        -moz-transform: scale(0.7) translate(28px,0px);
+        -o-transform: scale(0.7) translate(28px,0px);
+        -ie-transform: scale(0.7) translate(28px,0px);
+    }
+}
+@media screen and (max-width: 950px) {
+    .row.specs {
+        left: 5px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    #dashboard .container-fluid {
+        height: auto;
+    }
+    .user {
+        min-height: 300px;
+    }
+    .user .card-container#dashboardMap {
+        min-height: 300px;
+    }
+
+    #dashboard .container-box {
+        overflow-x: hidden;
+    }
+    div[class*="col-sm"] {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .knob-chart div {
+        top: 0;
+        transform: translate(0%, 0%);
+        -webit-transform: translate(0%, 0%);
+        -moz-transform: translate(0%, 0%);
+        -ie-transform: translate(0%, 0%);
+        -o-transform: translate(0%, 0%);
+    }
+
+    .full-height {
+        height: inherit;
+    }
+    .card-container {
+        height: inherit;
+    }
+    .dashboard-row.bottom-part {
+        height: inherit !important;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+    span.link {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .link img {
+        visibility: hidden;
+    }
+    span.link {
+        font-size: 8px;
+    }
 }

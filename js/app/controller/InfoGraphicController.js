@@ -6,14 +6,16 @@ var InfoGraphicController = function($scope,$location, GuruService) {
     $scope.disease = 0;
 
     setTimeout(function() {
-        GuruService.retrieveMachineInfo(function(data) {
-            $scope.plant = data.computed.plants;
-            $scope.energy = data.computed.energy;
-            $scope.matter = data.computed.floe;
-            $scope.melting = data.computed.radioactiveMatter;
-            $scope.disease = data.computed.diseased;
-        });
+        GuruService.retrieveMachineList(function(data) {
+            GuruService.retrieveMachineInfo(data[0].token,function(data) {
+                $scope.plant = data.computed.plants;
+                $scope.energy = data.computed.energy;
+                $scope.matter = data.computed.floe;
+                $scope.melting = data.computed.radioactiveMatter;
+                $scope.disease = data.computed.diseased;
+            });
 
+        });
         },2000);
 
     $scope.onDashboardClick = function() {

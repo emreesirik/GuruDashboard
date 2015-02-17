@@ -3,6 +3,7 @@
         <div id="title">
             <span class="logo">
                 <img src="img/logo.png">
+            </span>
                 <span class="links">
                     <span class="link" ng-class="page == 'dashboard' ? 'active' : ''"><img src="img/dashboardic.png" data-at2x="img/dashboardic@2x.png" > Guru Dashboard</span>
                     <span class="link" ng-class="page == 'rank' ? 'active' : ''"><img src="img/globalrank.png" data-at2x="img/globalrank@2x.png" > Global Rank
@@ -10,12 +11,16 @@
                     </span>
                 </span>
 
-            </span>
+
             <span class="login">
-                <img src="{{userAvatar}}">
+                <img ng-show="userAvatar != null" src="{{userAvatar}}">
                 <span class="name">{{name}}</span>
                 <span class="surname">{{surname}}</span>
+
             </span>
+        </div>
+        <div class="computer-list full-width" ng-show="machineList.length>1">
+            <span ng-repeat="computer in machineList" class="computers" ng-click="onSelectComputer(computer)"><img src="img/{{selectedComputer == computer ? 'active_' : ''}}computer.png">{{computer.name}}</span>
         </div>
         <div class="container-fluid">
 
@@ -59,7 +64,9 @@
                     <div class="col-md-4 col-sm-4 full-height spec-card">
                         <div class="spec-chart gpu-container  full-height">
                             <div class="title">Global % GPU usage Live</div>
-                            <div class="chart-info"><img src="img/gpu.png" data-at2x="img/gpu@2x.png">Unused GPU Usage</div>
+                            <div class="chart-info"><img src="img/gpu.png" data-at2x="img/gpu@2x.png">Unused GPU Usage
+                                <span ng-hide="isShowGPU" class="comming-soon">Coming Soon</span>
+                            </div>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-md-8 col-sm-8 col-xs-8 full-height">
@@ -136,29 +143,37 @@
                                     <div class="title">Calculated Guru Score</div>
                                     <div class="value odometer" ng-model="guruPoint" format="d">0</div>
                                     <linechart ng-model="guruPointData" class="chart" color="#d86ff1" renderer="line" valuekey="point"></linechart>
+                                    <span ng-hide="isShowGuruPoint" class="comming-soon">Coming Soon</span>
                                 </div>
                             </div>
                             <div class="col-md-5 col-sm-5 full-height">
                                 <div class="col-md-6 col-sm-6 full-height">
                                     <span class="card-title"><img src="img/bulb.png" data-at2x="img/bulb@2x.png">Kw/h USED and WASTED</span>
                                     <div class="card-container">
-                                        <div class="energy-chart">
+                                        <span class="knob-chart">
                                             <input ng-model="energy.ratio" data-width="100" type="text" value="100" readonly data-displayInput=false class="knobchart" data-fgColor="#5996EA" data-angleOffset=-125 data-angleArc=250 data-thickness=.16>
-                                        </div>
+                                        </span>
                                         <div class="energy-info">
+                                            <span ng-hide="!isShowEnergy">
                                                 <span class="value odometer" ng-model="energy.wasted" format="d">0</span>
                                                 <span class="postfix">{{energy.postfix}}</span>
+                                                 <div class="text">Wasted</div>
+                                            </span>
 
-                                            <div class="text">Wasted</div>
+
+                                            <span ng-show="!isShowEnergy" class="text">
+                                                Coming Soon
+                                            </span>
                                         </div>
+                                        <span class="knob-icon"><img src="img/lightning.png"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6 full-height">
                                     <span class="card-title"><img src="img/mouse.png" data-at2x="img/mouse@2x.png">Mouse Travelled</span>
                                     <div class="card-container">
-                                        <div class="energy-chart">
+                                         <span class="knob-chart">
                                             <input data-width="100" type="text" value="100" readonly data-displayInput=false class="knobchart" data-fgColor="#956CB0" data-angleOffset=-125 data-angleArc=250 data-thickness=.16>
-                                        </div>
+                                         </span>
                                         <div class="energy-info">
                                             <span ng-show="isShowTravel">
                                                 <span class="value odometer" ng-model="travel.distance" format="d">0</span>
@@ -170,6 +185,7 @@
                                             </span>
 
                                         </div>
+                                        <span class="knob-icon"><img src="img/man.png"></span>
                                     </div>
                                 </div>
                             </div>

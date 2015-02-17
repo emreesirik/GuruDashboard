@@ -1,14 +1,15 @@
-<div class="infographic-container">
+<div class="infographic-container vertical-middle-2">
     <div class="container-box">
-        <div id="title">Overal Assetment by Optimizing Your Computers Resources
-            <span id="dashboard-link" ng-click="onDashboardClick()">Continue to GURU Usage Dashboard </span>
+        <div id="title">Overal Assetment by Optimizing Your Computers Resources <span class="info-box" tooltip="Explain how to calculate values."></span>
+            <span id="dashboard-link" ng-click="onDashboardClick()">Continue to GURU Usage Dashboard <img src="img/go.png"></span>
         </div>
         <div class="container-fluid">
             <div class="row info-graphic-row">
                 <div class="col-md-6 col-sm-6 info-graphic-box plant">
                     <div class="row full-height">
                         <div class="col-md-6 col-sm-6 col-xs-6 full-height">
-                            <img src="img/wind2.svg" alt="Monkey face" style="width: auto; height: 90%;">
+                            <!--<img src="img/wind2.svg" alt="Monkey face" style="width: auto; height: 90%;">-->
+                            <img src="img/tree.png" alt="Monkey face" style="width: auto; height: 90%;" class="infographic-img">
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6 full-height">
                              <span class="plant-container vertical-middle">
@@ -23,13 +24,14 @@
                 <div class="col-md-6 col-sm-6 info-graphic-box energy">
                     <div class="row full-height">
                         <div class="col-md-6 col-sm-6 col-xs-6 full-height">
-                            <img src="img/wind2.svg" alt="Monkey face" style="width: auto; height: 90%;">
+                            <!--<img src="img/wind2.svg" alt="Monkey face" style="width: auto; height: 90%;">-->
+                            <img src="img/energy.png" alt="Monkey face" style="width: auto; height: 90%;" class="infographic-img">
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-6  full-height">
+                        <div class="col-md-6 col-sm-6 col-xs-6  full-height energy-text">
                             <span class="vertical-middle">
                                 <span class="main">Might Save</span>
                                 <span class="value">
-                                    <span class="odometer" id="energyValue" ng-model="energy.value">0</span>
+                                    <span class="odometer" id="energyValue" ng-model="energy.used">0</span>
                                     <span class="postfix">{{energy.unit}}</span></span>
 
                                 <span class="detail">Clean Energy</span>
@@ -42,7 +44,8 @@
                 <div class="col-md-6 col-sm-6 info-graphic-box melting">
                     <div class="row full-height">
                         <div class="col-md-6 col-sm-6 col-xs-6  full-height">
-                            <img src="img/wind2.svg" alt="Monkey face" style="width: auto; height: 90%;">
+                            <!--<img src="img/wind2.svg" alt="Monkey face" style="width: auto; height: 90%;">-->
+                            <img src="img/mountain.png" alt="Monkey face" style="width: auto; height: 90%;" class="infographic-img">
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6  full-height">
                             <span class="vertical-middle">
@@ -60,7 +63,8 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-3 info-graphic-box matter">
-                    <img src="img/wind2.svg" alt="Monkey face" style="width: auto; height: 40%;">
+                    <!--<img src="img/wind2.svg" alt="Monkey face" style="width: auto; height: 40%;">-->
+                    <img src="img/radioactive.png" alt="Monkey face" style="width: auto; height: 40%;" class="infographic-img">
                     <span class="main">Might Save</span>
                      <span class="value">
                          <span class="odometer" id="radioactiveValue" ng-model="matter.value">0</span>
@@ -70,7 +74,8 @@
                     <span class="detail2"> Matter</span>
                 </div>
                 <div class="col-md-3 col-sm-3 info-graphic-box people">
-                    <img src="img/wind2.svg" alt="Monkey face" style="width: auto; height: 40%;">
+                    <!--<img src="img/wind2.svg" alt="Monkey face" style="width: auto; height: 40%;">-->
+                    <img src="img/people.png" alt="Monkey face" style="width: auto; height: 40%;" class="infographic-img">
                     <span class="main">Might Prevent</span>
                     <span class="value odometer" id="diseaseValue" ng-model="disease">0</span>
                     <span class="detail">People from</span>

@@ -19,9 +19,12 @@ app.directive('knobchart', function() {
                 $(element[0]).trigger(
                     'configure',
                     {
-                        "width":parent.offsetWidth*3/4
+                        "width":parent.offsetWidth*3/4,
+                        "height":parent.offsetWidth*3/4
+
                     }
                 );
+
             };
 
             $(window).resize(function () {

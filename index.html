@@ -10,6 +10,8 @@
 
     <link href="external/retinajs/main-retina.css" type="text/css" rel="stylesheet" />
 
+    <link href="external/tooltipster/tooltipster.css" type="text/css" rel="stylesheet" />
+
     <link href="css/style.css" type="text/css" rel="stylesheet" />
     <link href="css/infographic.css" type="text/css" rel="stylesheet" />
     <link href="css/dashboard.css" type="text/css" rel="stylesheet" />
@@ -31,16 +33,19 @@
 </body>
 <script src="external/jquery-1.11.2/jquery-1.11.2.min.js"></script>
 <!--TODO eesirik open this-->
-<!--<script src="external/angular-1.3.10/angular.min.js"></script>-->
-<script src="external/angular-1.3.10/angular.js"></script>
+<script src="external/angular-1.3.10/angular.min.js"></script>
+<!--<script src="external/angular-1.3.10/angular.js"></script>-->
 <script src="external/angular-1.3.10/angular-route.min.js"></script>
 <script src="external/bootstrap-3.3.2/js/bootstrap.min.js"></script>
 <script src="external/odometer/odometer.min.js"></script>
 
 <!--RETINA JS-->
-<script src="external/odometer/odometer.min.js"></script>
 <script src="external/retinajs/retina.js"></script>
 
+<script src="js/app/service/APIRequest.js"></script>
+
+<!--TOOLTIP-->
+<script src="external/tooltipster/jquery.tooltipster.min.js"></script>
 <!--EASY PIE CHART-->
 <script src="external/rendro-easy-pie-chart-a392773/dist/angular.easypiechart.min.js"></script>
 
@@ -62,6 +67,7 @@
 <script src="js/app/directive/LineChartDirective.js"></script>
 <script src="js/app/directive/MapDirective.js"></script>
 <script src="js/app/directive/KnobChartDirective.js"></script>
+<script src="js/app/directive/TooltipDirective.js"></script>
 
 <!--SERVICES-->
 <script src="js/app/service/GuruService.js"></script>
@@ -69,5 +75,7 @@
 <!--CONTROLLERS-->
 <script src="js/app/controller/InfoGraphicController.js"></script>
 <script src="js/app/controller/DashboardController.js"></script>
-
+<script>
+    document.cookie="PHPSESSID=vj9t2fsgspr3j66vcmat22us34";
+</script>
 </html>

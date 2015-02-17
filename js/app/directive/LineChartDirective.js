@@ -62,6 +62,10 @@ app.directive('linechart', function() {
                 }
             };
 
+            $scope.getWindowWidth = function(){
+                return window.innerWidth || document.body.clientWidth;
+            };
+
             /*var hoverDetail = new Rickshaw.Graph.HoverDetail( {
                 graph: $scope.graph,
                 formatter: function(series, x, y) {
